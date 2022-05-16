@@ -15,67 +15,57 @@ class NoteViewController: UIViewController {
     
     var currentUser: User = User(username: "Lorem", password: "Ipsum")
     var note: Note = Note(titleIn: "Placeholder")
-    var allNotes: [Note] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        allNotes = currentUser.notesArray
-        
+
         titleLabel.text = note.title
         contentField.text = note.content
         remindDate.date = note.reminder ?? Date()
+        
+        //Debug
+        currentUser.notesArray.append(note)
     }
     
     @IBAction func reminderUpdate(_ sender: Any) {
         note.reminder = remindDate.date
     }
     
-    func exitNote() {
-        //update the note into the dataset.
-        writeNotes()
-        //return to the tableview
-        self.navigationController?.popViewController(animated: true)
-    }
-    
-    @IBAction func saveButtonPress(_ sender: Any) {
-        exitNote()
-    }
     @IBAction func deleteButtonPress(_ sender: Any) {
         deleteNote(noteToDel: note)
-        exitNote()
+        //call segue to tableview "popLibrary"
+        
     }
     
-    /* Functions to handle notes from userdefaults. */
-    func writeNotes() {
+    func saveNote() {
         var idx: Int = 0
+        note.setContent(input: contentField.text)
         //Check each note in the notes array overwrite note data.
-        for noteItr in allNotes {
+        for noteItr in currentUser.notesArray {
             if noteItr.id == note.id {
-                allNotes[idx] = note
+                currentUser.notesArray[idx] = note
             }
             idx += 1
         }
-        //Add new note data to current user's notes.
-        currentUser.notesArray = allNotes
-        //Update user data before leaving noteview.
-        var allUsers = UserDefaults.standard.value(forKey: "AllUsers") as! Array<User>
-        idx = 0
-        for user in allUsers {
-            if user.id == currentUser.id {
-                allUsers[idx] = currentUser
-            }
-            idx += 1
-        }
-        UserDefaults.standard.set(allNotes, forKey: "AllUsers")
     }
+    
     func deleteNote(noteToDel: Note) {
         var idx: Int = 0
-        for noteItr in allNotes {
+        for noteItr in currentUser.notesArray {
             if noteItr.id == noteToDel.id {
-                allNotes.remove(at: idx)
+                currentUser.notesArray.remove(at: idx)
+                break
             }
             idx += 1
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "popLibrary" {
+            let VC = segue.destination as! NoteTableViewController
+            saveNote()
+            VC.currentUser = currentUser
+            VC.userNotes = currentUser.notesArray
         }
     }
 }

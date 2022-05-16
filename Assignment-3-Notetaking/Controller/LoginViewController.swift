@@ -18,12 +18,14 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         errorLabel.text = ""
         
-        users = UserDefaults.standard.object(forKey: "Users") as? [User] ?? [User]()
+        //users = UserDefaults.standard.object(forKey: "Users") as? [User] ?? [User]()
+        users.append(User(username: "Luke", password: "1234"))
     }
 
     func confirmLogin() -> Bool {
         guard let user: String = userField.text else {return false}
-        guard let pass = userField.text else {return false}
+        //TODO: Fix secure text entry unwrapping to pass String
+        guard let pass = passField.text else {return false}
         
         //Confirm against valid logins.
         if user != "" && pass != "" {
@@ -36,6 +38,7 @@ class LoginViewController: UIViewController {
         return false
     }
     
+    //TODO: add user to users array when register button pressed FIX.
     @IBAction func registerButton(_ sender: Any) {
         let user = userField.text
         guard let pass = passField.text else {
@@ -67,7 +70,8 @@ class LoginViewController: UIViewController {
             }
             
             //Write users to memory.
-            UserDefaults.standard.set(users, forKey: "AllUsers")
+            //let encodedUsers = try? NSKeyedArchiver.archivedData(withRootObject: users, requiringSecureCoding: false)
+            //UserDefaults.standard.set(encodedUsers, forKey: "AllUsers")
         }
     }
 }
