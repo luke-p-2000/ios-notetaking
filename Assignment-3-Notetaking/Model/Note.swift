@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Note {
+class Note: Codable {
     //Declare note variables.
     var id = UUID().uuidString
     var title: String

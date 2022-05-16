@@ -4,6 +4,8 @@
 //
 //  Created by Luke Phillips on 13/5/2022.
 //
+// TODO: Refactor to remove userNotes and replace with setter calls to currentUser.notesArray
+// TODO: Fix refresh of table - must be before new note alert popup. Perhaps async wait.
 
 import UIKit
 
@@ -54,6 +56,7 @@ class NoteTableViewController: UITableViewController {
 
     }
     */
+    
     @IBAction func addNoteButton(_ sender: Any) {
         let alert = UIAlertController(title: "New Note", message: "Note Title", preferredStyle: .alert)
         alert.addTextField { (textField) in
@@ -64,7 +67,6 @@ class NoteTableViewController: UITableViewController {
             print("Added \(self.userNotes[self.userNotes.count-1].title)")
         }))
         self.present(alert, animated: true, completion: nil)
-        //TODO: wait for alert to collect input before proceeding.
         self.tableView.reloadData()
     }
     
