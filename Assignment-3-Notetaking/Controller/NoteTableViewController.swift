@@ -64,6 +64,7 @@ class NoteTableViewController: UITableViewController {
             print("Added \(self.userNotes[self.userNotes.count-1].title)")
         }))
         self.present(alert, animated: true, completion: nil)
+        //TODO: wait for alert to collect input before proceeding.
         self.tableView.reloadData()
     }
     
