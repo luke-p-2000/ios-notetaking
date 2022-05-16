@@ -7,7 +7,7 @@
 
 import Foundation
 
-class User {
+class User: Codable {
     var id = UUID().uuidString
     var name: String
     var pass: String
