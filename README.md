@@ -1,9 +1,10 @@
-group nice - Luke, Ryan, Jonathan, Naomi
+## Group "Nice" - Luke Phillips, Ryan Hamilton, Jonathan Nguyen, Naomi Daubaras
 1:30 Monday activity -01
 
+## iOS Notekeeping App
 
-# ios-notetaking
-Marking criteria of assignment 3 
+
+## Marking criteria of assignment 3 
  
  Presentation (15 marks)        
 • Describe the target audience (2 mark)  
