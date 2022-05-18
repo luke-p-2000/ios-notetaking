@@ -32,4 +32,8 @@ class Note: Codable {
     func setContent(input: String) {
         self.content = input
     }
+    
+    func getTitle() -> String{
+        return self.title;
+    }
 }
