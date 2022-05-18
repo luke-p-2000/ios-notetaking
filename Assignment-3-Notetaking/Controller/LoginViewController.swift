@@ -4,6 +4,7 @@
 //
 //  Created by Luke Phillips on 15/5/2022.
 //
+// TODO: Users list is reset when note view accessed from table controller. FIX.
 
 import Foundation
 import UIKit
@@ -62,6 +63,13 @@ class LoginViewController: UIViewController {
             return
         }
         
+        for user in users {
+            if user.name == userField.text {
+                errorLabel.text = "User must be unique."
+                return
+            }
+        }
+        
         //Append to registered users if password is present.
         if pass != "" {
             // nil coalesce to "Guest" in the event of no entered username.
@@ -90,6 +98,7 @@ class LoginViewController: UIViewController {
                     VC.currentUser = user
                 }
             }
+            VC.users = users
             
             // Encode the users data to JSON and store in UserDefaults to persist.
             do {

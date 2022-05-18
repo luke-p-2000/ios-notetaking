@@ -13,7 +13,7 @@ class NoteViewController: UIViewController {
     @IBOutlet weak var contentField: UITextView!
     @IBOutlet weak var remindDate: UIDatePicker!
     
-    var currentUser: User = User(username: "Lorem", password: "Ipsum")
+    var currentUser: User = User(username: "Steve", password: "Ipsum")
     var note: Note = Note(titleIn: "Placeholder")
     
     override func viewDidLoad() {
@@ -22,9 +22,6 @@ class NoteViewController: UIViewController {
         titleLabel.text = note.title
         contentField.text = note.content
         remindDate.date = note.reminder ?? Date()
-        
-        //Debug
-        currentUser.notesArray.append(note)
     }
     
     @IBAction func reminderUpdate(_ sender: Any) {
@@ -65,7 +62,6 @@ class NoteViewController: UIViewController {
             let VC = segue.destination as! NoteTableViewController
             saveNote()
             VC.currentUser = currentUser
-            VC.userNotes = currentUser.notesArray
         }
     }
 }
