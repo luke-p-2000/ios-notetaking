@@ -29,17 +29,17 @@
             <objects>
                 <viewController id="qZ4-AF-Frn" customClass="LoginViewController" customModule="Assignment_3_Notetaking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EuK-cj-eEH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note-Taking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHj-U3-JUm">
-                                <rect key="frame" x="113" y="138" width="188" height="43"/>
+                                <rect key="frame" x="113" y="50" width="188" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="evH-Se-krK">
-                                <rect key="frame" x="100" y="221" width="214" height="146.5"/>
+                                <rect key="frame" x="100" y="133" width="214" height="146.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOA-Pb-Qtu">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="20.5"/>
@@ -72,7 +72,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1iK-9o-Rjy">
-                                <rect key="frame" x="100" y="407.5" width="214" height="31"/>
+                                <rect key="frame" x="100" y="319.5" width="214" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ie-Fc-fhh">
                                         <rect key="frame" x="0.0" y="0.0" width="107" height="31"/>
@@ -117,14 +117,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vhf-Xa-SrA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="304" y="-1497"/>
+            <point key="canvasLocation" x="883" y="-1530"/>
         </scene>
         <!--Note Table View Controller-->
         <scene sceneID="BkH-Np-sku">
             <objects>
                 <tableViewController id="KfI-L6-W5r" customClass="NoteTableViewController" customModule="Assignment_3_Notetaking" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="K26-hx-tc1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <label key="tableHeaderView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="scZ-24-sbB">
@@ -134,15 +134,28 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="G9D-kp-0Jh">
+                        <stackView key="tableFooterView" opaque="NO" contentMode="scaleToFill" id="LE0-5t-D2s">
                             <rect key="frame" x="0.0" y="154.5" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Add Note"/>
-                            <connections>
-                                <action selector="addNoteButton:" destination="KfI-L6-W5r" eventType="touchUpInside" id="fkE-Jp-DZV"/>
-                            </connections>
-                        </button>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Few-4e-2mK">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="44"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Add Note"/>
+                                    <connections>
+                                        <action selector="addNoteButton:" destination="KfI-L6-W5r" eventType="touchUpInside" id="Ekd-yn-0qi"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ5-fr-1td">
+                                    <rect key="frame" x="207" y="0.0" width="207" height="44"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                    <connections>
+                                        <segue destination="qZ4-AF-Frn" kind="show" identifier="logoutSegue" id="wum-bX-k5e"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteCell" textLabel="vyC-YP-Eye" detailTextLabel="Bb1-6J-5bQ" style="IBUITableViewCellStyleValue1" id="jNT-WC-fXX">
                                 <rect key="frame" x="0.0" y="88.5" width="414" height="43.5"/>
@@ -181,18 +194,18 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckE-EA-i9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="284" y="-745"/>
+            <point key="canvasLocation" x="2451" y="-1530"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="FX2-3A-Bin">
             <objects>
                 <viewController id="ihz-e6-Xep" customClass="NoteViewController" customModule="Assignment_3_Notetaking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xla-WH-uz2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gx5-u8-KQJ">
-                                <rect key="frame" x="40" y="98" width="334" height="734"/>
+                                <rect key="frame" x="40" y="10" width="334" height="768"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWP-4M-zQC">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="29"/>
@@ -218,20 +231,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kUo-sG-ax7">
-                                        <rect key="frame" x="0.0" y="413" width="334" height="270"/>
+                                        <rect key="frame" x="0.0" y="413" width="334" height="304"/>
                                         <connections>
                                             <action selector="reminderUpdate:" destination="ihz-e6-Xep" eventType="valueChanged" id="sUX-OB-DQv"/>
                                         </connections>
                                     </datePicker>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJd-EZ-Uhy">
-                                        <rect key="frame" x="0.0" y="703" width="334" height="31"/>
+                                        <rect key="frame" x="0.0" y="737" width="334" height="31"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-Wu-HB0">
                                                 <rect key="frame" x="0.0" y="0.0" width="167" height="31"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                                                 <connections>
-                                                    <action selector="saveButtonPress:" destination="ihz-e6-Xep" eventType="touchUpInside" id="726-o0-jor"/>
                                                     <segue destination="KfI-L6-W5r" kind="show" identifier="popLibrary" id="LBS-d4-V6I"/>
                                                 </connections>
                                             </button>
@@ -247,6 +259,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="kUo-sG-ax7" firstAttribute="centerX" secondItem="gx5-u8-KQJ" secondAttribute="centerX" id="3N9-7y-ebT"/>
                                     <constraint firstItem="fkG-4l-v9h" firstAttribute="top" secondItem="97s-VO-qXR" secondAttribute="bottom" constant="20" id="ypP-UL-8OZ"/>
                                 </constraints>
                             </stackView>
@@ -270,11 +283,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tWA-pe-9ZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1416" y="-745"/>
+            <point key="canvasLocation" x="1428" y="-745"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gM0-ai-JC2"/>
+        <segue reference="LBS-d4-V6I"/>
+        <segue reference="wum-bX-k5e"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

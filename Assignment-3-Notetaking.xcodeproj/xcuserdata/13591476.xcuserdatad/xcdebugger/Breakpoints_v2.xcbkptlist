@@ -14,8 +14,8 @@
             filePath = "Assignment-3-Notetaking/Controller/NoteViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Assignment-3-Notetaking/Controller/NoteViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "Assignment-3-Notetaking/Controller/NoteViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
             landmarkName = "saveNote()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,25 +62,9 @@
             filePath = "Assignment-3-Notetaking/Controller/NoteViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "saveNote()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3EED71E9-BAD6-4524-8681-AD3B3FB33DC2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Assignment-3-Notetaking/Controller/NoteViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -94,8 +78,8 @@
             filePath = "Assignment-3-Notetaking/Controller/NoteTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "addNoteButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,24 +94,8 @@
             filePath = "Assignment-3-Notetaking/Controller/NoteTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "addNoteButton(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C6A34971-F5CC-49A3-A69B-8EC56C2D00E1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Assignment-3-Notetaking/Controller/NoteTableViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "addNoteButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -142,8 +110,8 @@
             filePath = "Assignment-3-Notetaking/Controller/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "registerButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -158,8 +126,8 @@
             filePath = "Assignment-3-Notetaking/Controller/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "registerButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,8 +142,8 @@
             filePath = "Assignment-3-Notetaking/Controller/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "registerButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -190,8 +158,8 @@
             filePath = "Assignment-3-Notetaking/Controller/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "registerButton(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -206,9 +174,41 @@
             filePath = "Assignment-3-Notetaking/Controller/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "registerButton(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A99C0057-E979-49D0-AE29-CA5D0CD3AE4B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment-3-Notetaking/Controller/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "prepare(for:sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EAA1AE30-1164-41B1-A5D2-D275D2A6734F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Assignment-3-Notetaking/Controller/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
