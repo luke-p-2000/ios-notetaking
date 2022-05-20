@@ -4,7 +4,6 @@
 //
 //  Created by Luke Phillips on 15/5/2022.
 //
-// TODO: Users list is reset when note view accessed from table controller. FIX.
 
 import Foundation
 import UIKit
@@ -18,6 +17,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         errorLabel.text = ""
+        
+        //DEBUG CLEAR DEFAULTS
+        //UserDefaults.standard.removeObject(forKey: "AllUsers")
         
         // Extract and decode user data from the userdefaults stored array.
         if let data = UserDefaults.standard.data(forKey: "AllUsers") {
@@ -96,9 +98,9 @@ class LoginViewController: UIViewController {
                 if user.name == userField.text {
                     // Assign the view controller instance variable to the logged in user.
                     VC.currentUser = user
+                    //print("Sent")
                 }
             }
-            VC.users = users
             
             // Encode the users data to JSON and store in UserDefaults to persist.
             do {

@@ -18,6 +18,8 @@
 		8D8F2B77282E4C21007B8575 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8F2B76282E4C21007B8575 /* NoteViewController.swift */; };
 		8DB4FB1F2830D2F300A80A1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4FB1E2830D2F300A80A1C /* LoginViewController.swift */; };
 		8DB4FB222830DE7E00A80A1C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4FB212830DE7E00A80A1C /* User.swift */; };
+		8DFAA1C22837457C00325FB7 /* DrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFAA1C12837457C00325FB7 /* DrawViewController.swift */; };
+		8DFAA1C42837458600325FB7 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFAA1C32837458600325FB7 /* Canvas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		8D8F2B76282E4C21007B8575 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		8DB4FB1E2830D2F300A80A1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8DB4FB212830DE7E00A80A1C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8DFAA1C12837457C00325FB7 /* DrawViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawViewController.swift; sourceTree = "<group>"; };
+		8DFAA1C32837458600325FB7 /* Canvas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,7 @@
 			children = (
 				8D8F2B73282E4966007B8575 /* Note.swift */,
 				8DB4FB212830DE7E00A80A1C /* User.swift */,
+				8DFAA1C32837458600325FB7 /* Canvas.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 				8DB4FB1E2830D2F300A80A1C /* LoginViewController.swift */,
 				8D8F2B76282E4C21007B8575 /* NoteViewController.swift */,
 				8D8F2B71282E4902007B8575 /* NoteTableViewController.swift */,
+				8DFAA1C12837457C00325FB7 /* DrawViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -172,6 +178,8 @@
 				8DB4FB1F2830D2F300A80A1C /* LoginViewController.swift in Sources */,
 				8D8F2B74282E4966007B8575 /* Note.swift in Sources */,
 				8D8F2B62282E4646007B8575 /* ViewController.swift in Sources */,
+				8DFAA1C42837458600325FB7 /* Canvas.swift in Sources */,
+				8DFAA1C22837457C00325FB7 /* DrawViewController.swift in Sources */,
 				8D8F2B72282E4902007B8575 /* NoteTableViewController.swift in Sources */,
 				8DB4FB222830DE7E00A80A1C /* User.swift in Sources */,
 				8D8F2B5E282E4646007B8575 /* AppDelegate.swift in Sources */,

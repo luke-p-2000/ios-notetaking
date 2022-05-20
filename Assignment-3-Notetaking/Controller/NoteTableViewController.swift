@@ -4,7 +4,6 @@
 //
 //  Created by Luke Phillips on 13/5/2022.
 //
-// TODO: Fix refresh of table - must be before new note alert popup. Perhaps async wait.
 
 import UIKit
 
@@ -17,10 +16,22 @@ class NoteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Import users data to users array from userdefaults.
+        if let data = UserDefaults.standard.data(forKey: "AllUsers") {
+            do {
+                // Data array is stored in JSON format.
+                let decoder = JSONDecoder()
+                users = try decoder.decode(Array<User>.self, from: data)
+            } catch {
+                print("Failed to decode user data. Error: \(error)")
+            }
+        }
+        
         //Debug Prints
         for note in currentUser.notesArray {
             print("\(note.title), ")
         }
+        print("Welcome, \(currentUser.name).")
     }
 
     // MARK: - Table view data source

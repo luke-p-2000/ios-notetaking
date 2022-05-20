@@ -16,6 +16,8 @@ class NoteViewController: UIViewController {
     var currentUser: User = User(username: "Steve", password: "Ipsum")
     var note: Note = Note(titleIn: "Placeholder")
     var userNote = [String : Any]()
+    var users: [User] = []
+    var deleted: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +35,7 @@ class NoteViewController: UIViewController {
     @IBAction func deleteButtonPress(_ sender: Any) {
         deleteNote(noteToDel: note)
         //call segue to tableview "popLibrary"
-        
+        performSegue(withIdentifier: "popLibrary", sender: nil)
     }
     
     @IBAction func drawOnClick(_ sender: Any) {
@@ -60,6 +62,7 @@ class NoteViewController: UIViewController {
         for noteItr in currentUser.notesArray {
             if noteItr.id == noteToDel.id {
                 currentUser.notesArray.remove(at: idx)
+                deleted = true
                 break
             }
             idx += 1
@@ -69,7 +72,9 @@ class NoteViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "popLibrary" {
             let VC = segue.destination as! NoteTableViewController
-            saveNote()
+            if !deleted {
+                saveNote()
+            }
             VC.currentUser = currentUser
         }
     }
@@ -85,9 +90,9 @@ class NoteViewController: UIViewController {
             if key == note.getTitle(){
                 if let data = value as? Data, let image = UIImage(data: data){ //UserDefaults.standard.data(forKey: "snapshot"), let image = UIImage(data: data) {
                     
-                    let uiimage = UIImageView(frame: CGRect(x: 10, y: 50, width: 100, height: 300))
+                    let uiimage = UIImageView(frame: CGRect(x: 10, y: 80, width: 100, height: 300))
                     //let uiimage = UIImageView()
-                    uiimage.image = image as? UIImage
+                    uiimage.image = image as UIImage
                 
                     
                     self.view.addSubview(uiimage)
