@@ -15,6 +15,7 @@ class NoteViewController: UIViewController {
     
     var currentUser: User = User(username: "Steve", password: "Ipsum")
     var note: Note = Note(titleIn: "Placeholder")
+    var userNote = [String : Any]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class NoteViewController: UIViewController {
         titleLabel.text = note.title
         contentField.text = note.content
         remindDate.date = note.reminder ?? Date()
+        loadDrawing()
     }
     
     @IBAction func reminderUpdate(_ sender: Any) {
@@ -33,6 +35,13 @@ class NoteViewController: UIViewController {
         //call segue to tableview "popLibrary"
         
     }
+    
+    @IBAction func drawOnClick(_ sender: Any) {
+        print(note.getTitle())
+        UserDefaults.standard.set(note.getTitle(), forKey: "note")
+        performSegue(withIdentifier: "drawSegue", sender: nil)
+    }
+    
     
     func saveNote() {
         var idx: Int = 0
@@ -63,5 +72,31 @@ class NoteViewController: UIViewController {
             saveNote()
             VC.currentUser = currentUser
         }
+    }
+    
+    func loadDrawing(){
+        userNote = UserDefaults.standard.value(forKey: "snapshot") as? [String : Any] ?? [note.getTitle() : "test"]
+        
+        //var noteName = Array(userNote.keys)
+        //var noteData = Array(userNote.values)
+        //print(userNote)
+        
+        for(key, value) in userNote{
+            if key == note.getTitle(){
+                if let data = value as? Data, let image = UIImage(data: data){ //UserDefaults.standard.data(forKey: "snapshot"), let image = UIImage(data: data) {
+                    
+                    let uiimage = UIImageView(frame: CGRect(x: 10, y: 50, width: 100, height: 300))
+                    //let uiimage = UIImageView()
+                    uiimage.image = image as? UIImage
+                
+                    
+                    self.view.addSubview(uiimage)
+                    //uiimage.translatesAutoresizingMaskIntoConstraints = false
+                    
+                }
+            }
+        }
+        
+        
     }
 }
