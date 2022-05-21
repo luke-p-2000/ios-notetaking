@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3hk-4A-Hxk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3hk-4A-Hxk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -33,13 +33,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Note-Taking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHj-U3-JUm">
-                                <rect key="frame" x="113" y="94" width="188" height="43"/>
+                                <rect key="frame" x="113" y="50" width="188" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="evH-Se-krK">
-                                <rect key="frame" x="100" y="177" width="214" height="146.5"/>
+                                <rect key="frame" x="100" y="133" width="214" height="146.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOA-Pb-Qtu">
                                         <rect key="frame" x="0.0" y="0.0" width="214" height="20.5"/>
@@ -72,7 +72,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1iK-9o-Rjy">
-                                <rect key="frame" x="100" y="363.5" width="214" height="31"/>
+                                <rect key="frame" x="100" y="319.5" width="214" height="31"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ie-Fc-fhh">
                                         <rect key="frame" x="0.0" y="0.0" width="107" height="31"/>
@@ -205,7 +205,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gx5-u8-KQJ">
-                                <rect key="frame" x="40" y="54" width="334" height="758"/>
+                                <rect key="frame" x="40" y="10" width="334" height="768"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWP-4M-zQC">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="29"/>
@@ -231,13 +231,19 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kUo-sG-ax7">
-                                        <rect key="frame" x="0.0" y="413" width="334" height="294"/>
+                                        <rect key="frame" x="0.0" y="413" width="334" height="263.5"/>
                                         <connections>
                                             <action selector="reminderUpdate:" destination="ihz-e6-Xep" eventType="valueChanged" id="sUX-OB-DQv"/>
                                         </connections>
                                     </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Reminder Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OQ-hB-fsk">
+                                        <rect key="frame" x="0.0" y="696.5" width="334" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kJd-EZ-Uhy">
-                                        <rect key="frame" x="0.0" y="727" width="334" height="31"/>
+                                        <rect key="frame" x="0.0" y="737" width="334" height="31"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnh-Wu-HB0">
                                                 <rect key="frame" x="0.0" y="0.0" width="111.5" height="31"/>
@@ -286,6 +292,7 @@
                     <connections>
                         <outlet property="contentField" destination="97s-VO-qXR" id="FXP-Sn-gUD"/>
                         <outlet property="remindDate" destination="kUo-sG-ax7" id="WZP-0P-YXq"/>
+                        <outlet property="remindLabel" destination="0OQ-hB-fsk" id="fMM-xk-iGF"/>
                         <outlet property="titleLabel" destination="RWP-4M-zQC" id="Qrn-oW-vju"/>
                         <segue destination="wdX-rk-SCt" kind="show" identifier="drawSegue" id="rsc-a4-DHc"/>
                     </connections>
