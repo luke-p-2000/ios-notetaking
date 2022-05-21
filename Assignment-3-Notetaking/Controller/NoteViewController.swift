@@ -25,6 +25,10 @@ class NoteViewController: UIViewController {
         titleLabel.text = note.title
         contentField.text = note.content
         remindDate.date = note.reminder ?? Date()
+        //loadDrawing()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         loadDrawing()
     }
     
@@ -80,28 +84,29 @@ class NoteViewController: UIViewController {
     }
     
     func loadDrawing(){
-        userNote = UserDefaults.standard.value(forKey: "snapshot") as? [String : Any] ?? [note.getTitle() : "test"]
+        userNote = UserDefaults.standard.value(forKey: note.getTitle()) as? [String : Any] ?? [note.getTitle() : "test"]
         
-        //var noteName = Array(userNote.keys)
-        //var noteData = Array(userNote.values)
         //print(userNote)
+        print("load " + note.getTitle())
         
         for(key, value) in userNote{
+            print("saved " + key)
             if key == note.getTitle(){
-                if let data = value as? Data, let image = UIImage(data: data){ //UserDefaults.standard.data(forKey: "snapshot"), let image = UIImage(data: data) {
-                    
-                    let uiimage = UIImageView(frame: CGRect(x: 10, y: 80, width: 100, height: 300))
-                    //let uiimage = UIImageView()
+                if let data = value as? Data, let image = UIImage(data: data){
+                    let uiimage = UIImageView(frame: CGRect(x: 10, y: 80, width: 260, height: 300))
+               
                     uiimage.image = image as UIImage
-                
                     
                     self.view.addSubview(uiimage)
                     //uiimage.translatesAutoresizingMaskIntoConstraints = false
+                    uiimage.translatesAutoresizingMaskIntoConstraints = true
+                        uiimage.center = CGPoint(x: view.bounds.midX, y: view.bounds.midY)
+                        uiimage.autoresizingMask = [UIView.AutoresizingMask.flexibleLeftMargin, UIView.AutoresizingMask.flexibleRightMargin, UIView.AutoresizingMask.flexibleTopMargin, UIView.AutoresizingMask.flexibleBottomMargin]
+                    
                     
                 }
             }
         }
-        
-        
     }
 }
+    
