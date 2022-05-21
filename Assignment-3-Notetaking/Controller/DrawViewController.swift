@@ -97,7 +97,7 @@ class DrawViewController: UIViewController {
         if let data = image.pngData() {
             //userNote = [note : data]
             userNote.updateValue(data, forKey: note)
-            UserDefaults.standard.set(userNote, forKey: "snapshot")
+            UserDefaults.standard.set(userNote, forKey: note)
         }
         //performSegue(withIdentifier: "testSegue", sender: nil);
     }
