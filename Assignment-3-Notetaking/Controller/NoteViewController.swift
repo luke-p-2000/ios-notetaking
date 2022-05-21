@@ -12,6 +12,7 @@ class NoteViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentField: UITextView!
     @IBOutlet weak var remindDate: UIDatePicker!
+    @IBOutlet weak var remindLabel: UILabel!
     
     var currentUser: User = User(username: "Steve", password: "Ipsum")
     var note: Note = Note(titleIn: "Placeholder")
@@ -30,6 +31,7 @@ class NoteViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         loadDrawing()
+        countdownLabel()
     }
     
     @IBAction func reminderUpdate(_ sender: Any) {
@@ -48,6 +50,28 @@ class NoteViewController: UIViewController {
         performSegue(withIdentifier: "drawSegue", sender: nil)
     }
     
+    func countdownLabel() {
+        let current = Date()
+        guard let interval = ((note.reminder ?? current) - current) else {
+            remindLabel.text = "No reminder set."
+            return
+        }
+        
+        let seconds = Int(interval)
+        let min = (seconds%3600)/60
+        let hour = (seconds%86400)/3600
+        let day = seconds/86400
+        
+        if seconds == 0 {
+            remindLabel.text = "No reminder set"
+        } else if day == 0 {
+            remindLabel.text = "Remind: \(hour)h, \(min)m."
+        } else if hour == 0 && day == 0 {
+            remindLabel.text = "Remind: \(min)m."
+        } else {
+            remindLabel.text = "Remind: \(day)d, \(hour)h, \(min)m."
+        }
+    }
     
     func saveNote() {
         var idx: Int = 0
@@ -110,3 +134,8 @@ class NoteViewController: UIViewController {
     }
 }
     
+extension Date {
+    static func - (lhs: Date, rhs: Date) -> TimeInterval? {
+        return lhs.timeIntervalSinceReferenceDate - rhs.timeIntervalSinceReferenceDate
+    }
+}
