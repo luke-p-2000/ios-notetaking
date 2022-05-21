@@ -16,6 +16,8 @@ class NoteTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         // Import users data to users array from userdefaults.
         if let data = UserDefaults.standard.data(forKey: "AllUsers") {
             do {

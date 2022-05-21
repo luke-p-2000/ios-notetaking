@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBackground()
+        addBackground1()
         errorLabel.text = ""
         
         //DEBUG CLEAR DEFAULTS
@@ -33,6 +35,25 @@ class LoginViewController: UIViewController {
         }
         // Debig print statement.
         print("There are \(users.count) users enrolled.")
+    }
+    
+    // configure and add background image to mainscreen
+    func addBackground() {
+        let image = UIImage(named: "b1")
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        imageView.contentMode = .scaleAspectFit
+        self.view.addSubview(imageView)
+        self.view.sendSubviewToBack(imageView)
+    }
+    // configure and add background image to mainscreen
+    func addBackground1() {
+        let image = UIImage(named: "b1w")
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        imageView.contentMode = .scaleToFill
+        self.view.addSubview(imageView)
+        self.view.sendSubviewToBack(imageView)
     }
 
     func confirmLogin() -> Bool {
