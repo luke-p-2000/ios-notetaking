@@ -16,7 +16,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addBackground()
+        if UIScreen.main.bounds.height < 600.0 {
+            addBackgroundPod()
+        } else {
+            addBackgroundPhone()
+        }
         addBackground1()
         errorLabel.text = ""
         
@@ -38,7 +42,15 @@ class LoginViewController: UIViewController {
     }
     
     // configure and add background image to mainscreen
-    func addBackground() {
+    func addBackgroundPhone() {
+        let image = UIImage(named: "b1")
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 0, y: -180, width: self.view.bounds.width, height: self.view.bounds.height)
+        imageView.contentMode = .scaleAspectFit
+        self.view.addSubview(imageView)
+        self.view.sendSubviewToBack(imageView)
+    }
+    func addBackgroundPod() {
         let image = UIImage(named: "b1")
         let imageView = UIImageView(image: image!)
         imageView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
