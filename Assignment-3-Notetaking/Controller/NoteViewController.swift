@@ -13,6 +13,7 @@ class NoteViewController: UIViewController {
     @IBOutlet weak var contentField: UITextView!
     @IBOutlet weak var remindDate: UIDatePicker!
     @IBOutlet weak var remindLabel: UILabel!
+    @IBOutlet weak var stackview: UIStackView!
     
     var currentUser: User = User(username: "Steve", password: "Ipsum")
     var note: Note = Note(titleIn: "Placeholder")
@@ -22,11 +23,20 @@ class NoteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBackground1()
 
         titleLabel.text = note.title
         contentField.text = note.content
         remindDate.date = note.reminder ?? Date()
         //loadDrawing()
+    }
+    func addBackground1() {
+        let image = UIImage(named: "b1w")
+        let imageView = UIImageView(image: image!)
+        imageView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        imageView.contentMode = .scaleToFill
+        self.view.addSubview(imageView)
+        self.view.sendSubviewToBack(imageView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -117,7 +127,12 @@ class NoteViewController: UIViewController {
             print("saved " + key)
             if key == note.getTitle(){
                 if let data = value as? Data, let image = UIImage(data: data){
-                    let uiimage = UIImageView(frame: CGRect(x: 10, y: 80, width: 260, height: 300))
+                    var uiimage: UIImageView
+                    if UIScreen.main.bounds.height < 600 {
+                        uiimage = UIImageView(frame: CGRect(x: 10, y: 80, width: 170, height: 200))
+                    } else {
+                        uiimage = UIImageView(frame: CGRect(x: 10, y: 80, width: 260, height: 300))
+                    }
                
                     uiimage.image = image as UIImage
                     

@@ -15,7 +15,7 @@ class NoteTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         
         
         // Import users data to users array from userdefaults.
@@ -28,6 +28,7 @@ class NoteTableViewController: UITableViewController {
                 print("Failed to decode user data. Error: \(error)")
             }
         }
+        
         
         //Debug Prints
         for note in currentUser.notesArray {
